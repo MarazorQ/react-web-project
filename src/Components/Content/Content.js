@@ -1,5 +1,6 @@
 import React from 'react';
 import Styles from './Content.module.css';
+import Posts from './Posts/Posts';
 
 const Content = () =>{
     return(
@@ -10,20 +11,7 @@ const Content = () =>{
             <div className={Styles.item}>
                 ava + description
             </div>
-            <div>
-                My posts
-            <div>
-                New post
-            </div>
-            <div>
-                <div>
-                    post 1
-                </div>
-                <div>
-                    post 2
-                </div>
-            </div>
-            </div>
+            <Posts/>
         </div>
     )
 }
