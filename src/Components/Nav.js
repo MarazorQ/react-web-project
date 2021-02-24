@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import Styles from './Nav.module.css';
 
 function Nav(){
     return(
-        <nav className="nav">
+        <nav className={Styles.nav}>
             <div>
                 <a>Profile</a>
             </div>

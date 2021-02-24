@@ -1,9 +1,9 @@
 import React from 'react';
-import './App.css';
+import Styles from './Content.module.css';
 
 const Content = () =>{
     return(
-        <div className="content">
+        <div className={Styles.content}>
             <div>
                 <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' />
             </div>
