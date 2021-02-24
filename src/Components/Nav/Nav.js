@@ -4,7 +4,7 @@ import Styles from './Nav.module.css';
 function Nav(){
     return(
         <nav className={Styles.nav}>
-            <div>
+            <div className={Styles.item}>
                 <a>Profile</a>
             </div>
             <div>
