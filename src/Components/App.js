@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import Content from './Content/Content';
 import Footer from './Footer';
 import Nav from './Nav/Nav';
+import Messages from './Messages/Messages';
 import './App.css';
 
 class App extends React.Component{
@@ -11,7 +12,8 @@ class App extends React.Component{
         <div className="app-wrapper">
           <Header/>
           <Nav/>
-          <Content/>
+          {/* <Content/> */}
+          <Messages/>
           <Footer/>
         </div>
       )

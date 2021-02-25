@@ -5,10 +5,10 @@ function Nav(){
     return(
         <nav className={Styles.nav}>
             <div className={Styles.item}>
-                <a>Profile</a>
+                <a href='/Profile'>Profile</a>
             </div>
             <div>
-                <a>Messages</a>
+                <a href='/Messages'>Messages</a>
             </div>
             <div>
                 <a>News</a>
