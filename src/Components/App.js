@@ -4,18 +4,21 @@ import Content from './Content/Content';
 import Footer from './Footer';
 import Nav from './Nav/Nav';
 import Messages from './Messages/Messages';
+import {BrowserRouter, Route} from "react-router-dom";
 import './App.css';
 
 class App extends React.Component{
     render(){
       return(
-        <div className="app-wrapper">
-          <Header/>
-          <Nav/>
-          {/* <Content/> */}
-          <Messages/>
-          <Footer/>
-        </div>
+        <BrowserRouter>
+          <div className="app-wrapper">
+            <Header/>
+            <Nav/>
+            <Route path="/Messages" component={Messages}/>
+            <Route path="/Profile" component={Content}/>
+            <Footer/>
+          </div>
+        </BrowserRouter>
       )
     }
 }
