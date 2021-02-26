@@ -14,6 +14,11 @@
     padding: 20px;
 }
 
+.dialogsItems a.active{
+    padding: 20px;
+    color:white;
+}
+
 .item{
 
 }
