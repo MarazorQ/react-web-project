@@ -1,5 +1,28 @@
 .content {
     grid-area: c;
     background-color: cornflowerblue;
+    display: grid;
+    /*grid-template-rows: 60px 1fr;*/
+    grid-template-columns: 2fr 10fr;
   }
+
+.dialogs{
+
+}
+
+.dialogsItems{
+    padding: 20px;
+}
+
+.item{
+
+}
+
+.messages{
+    padding: 20px;
+}
+
+.message{
+
+}
   
