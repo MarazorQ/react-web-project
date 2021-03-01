@@ -19,23 +19,33 @@ const Message = (props) => {
 }
 
 const Messages = () =>{
+    let MessageItems = [
+        {id: 1, message: 'hi'},
+        {id: 2, message: 'How are you'},
+        {id: 3, message: 'by by'},
+        {id: 3, message: 'by byasdadsasddas'}
+    ]
+    let newMessageItems = MessageItems.map((items) => {
+        return(<Message message={items.message}/>)
+    })
+    let DialogItems = [
+        {id: 1, name: 'Artem'},
+        {id: 2, name: 'gena'},
+        {id: 3, name: 'Apasha'},
+        {id: 4, name: 'dasa'},
+        {id: 5, name: 'vas'},
+        {id: 6, name: 'Ar'}
+    ]
+    let newDialogItems = DialogItems.map(items => <DialogItem name={items.name} id={items.id}/>)
     return(
         <div className={Styles.content}>
             <div className={Styles.dialogs}>
                 <div className={Styles.dialogsItems}>
-                    <DialogItem name="Artem" id="2"/>
-                    <DialogItem name="Pasha" id="3"/>
-                    <DialogItem name="Roma" id="4"/>
-                    <DialogItem name="Artut" id="5"/>
-                    <DialogItem name="Dasha" id="7"/>
-                    <DialogItem name="Art" id="11"/>
-                    <DialogItem name="Rutu" id="24"/>
+                    {newDialogItems}
                 </div>
             </div>
             <div className={Styles.messages}>
-                <Message message="How are you"/>
-                <Message message="Fuck you"/>
-                <Message message="Hi!"/>
+                {newMessageItems}
             </div>
         </div>
     )

@@ -2,6 +2,13 @@ import React from 'react';
 import Post from './Post/Post';
 
 const Posts = () =>{
+    let PostsItems = [
+        {id: 1, name: 'p1', countLike: 112},
+        {id: 2, name: 'p2', countLike: 1},
+        {id: 3, name: 'p3', countLike: 12},
+        {id: 2, name: 'p2sadasdads', countLike: 122222}
+    ]
+    let NewPostItems = PostsItems.map(items => <Post name={items.name} count={items.countLike}/>)
     return(
         <div>
         My posts
@@ -10,9 +17,7 @@ const Posts = () =>{
             <textarea></textarea>
             <button>Add post</button>
         </div>
-        <Post name="p1" count="15"/>
-        <Post name="p2"/>
-        <Post name="p3"/>
+            {NewPostItems}
         </div>
     )
 }
