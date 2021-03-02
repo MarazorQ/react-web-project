@@ -3,11 +3,11 @@ import Styles from './Content.module.css';
 import Posts from './Posts/Posts';
 import ContentInf from "./ContentInf/ContentInf";
 
-const Content = () =>{
+const Content = (props) =>{
     return(
         <div className={Styles.content}>
             <ContentInf/>
-            <Posts/>
+            <Posts items={props.itemsContent}/>
         </div>
     )
 }

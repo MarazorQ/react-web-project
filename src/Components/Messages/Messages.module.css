@@ -19,8 +19,8 @@
     color:white;
 }
 
-.item{
-
+.item a{
+    text-decoration: none;
 }
 
 .messages{
