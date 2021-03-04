@@ -37,4 +37,11 @@ let state = {
         ]
     }
 }
+export let addNewPost = (data) =>{
+    let newPost = {
+        id: 14, name: data, countLike: 1122
+    }
+    state.Content.PostsItems.push(newPost);
+}
+
 export default state

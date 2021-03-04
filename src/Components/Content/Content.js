@@ -7,7 +7,7 @@ const Content = (props) =>{
     return(
         <div className={Styles.content}>
             <ContentInf/>
-            <Posts items={props.itemsContent.PostsItems}/>
+            <Posts items={props.itemsContent.PostsItems} addPost={props.addPosts}/>
         </div>
     )
 }

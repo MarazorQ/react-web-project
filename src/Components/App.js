@@ -5,11 +5,12 @@ import Footer from './Footer';
 import Nav from './Nav/Nav';
 import Messages from './Messages/Messages';
 import {BrowserRouter, Route} from "react-router-dom";
+import {addNewPost} from './../Redux/State'
 import './App.css';
 
 const App = (props) => {
     const itemsMessage = () => <Messages itemsMessages={props.state.Messages}/>
-    const itemsContent = () => <Content itemsContent={props.state.Content}/>
+    const itemsContent = () => <Content itemsContent={props.state.Content} addPosts={addNewPost}/>
     return (
         <BrowserRouter>
             <div className="app-wrapper">

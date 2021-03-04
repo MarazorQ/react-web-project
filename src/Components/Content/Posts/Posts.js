@@ -6,7 +6,7 @@ const Posts = (props) =>{
     let LinkRef = React.createRef()
     let HandleButton = () =>{
         let text = LinkRef.current.value;
-        alert(text)
+        props.addPost(text)
     }
     return(
         <div>
