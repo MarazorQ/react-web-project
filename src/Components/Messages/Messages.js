@@ -5,10 +5,10 @@ import Message from "./Message/Message";
 import DialogItem from "./DialogItem/DialogItem";
 
 const Messages = (props) =>{
-    let newMessageItems = props.itemsMessages.map((items) => {
+    let newMessageItems = props.itemsMessages.MessageItems.map((items) => {
         return(<Message message={items.message}/>)
     })
-    let newDialogItems = props.itemsDialog.map(items => <DialogItem name={items.name} id={items.id}/>)
+    let newDialogItems = props.itemsMessages.DialogItems.map(items => <DialogItem name={items.name} id={items.id}/>)
     return(
         <div className={Styles.content}>
             <div className={Styles.dialogs}>

@@ -8,8 +8,8 @@ import {BrowserRouter, Route} from "react-router-dom";
 import './App.css';
 
 const App = (props) => {
-    const itemsMessage = () => <Messages itemsMessages={props.MessageItems} itemsDialog={props.DialogItems}/>
-    const itemsContent = () => <Content itemsContent={props.PropsItems}/>
+    const itemsMessage = () => <Messages itemsMessages={props.state.Messages}/>
+    const itemsContent = () => <Content itemsContent={props.state.Content}/>
     return (
         <BrowserRouter>
             <div className="app-wrapper">
