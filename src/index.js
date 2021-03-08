@@ -1,8 +1,6 @@
-import React from 'react';
-import { render } from 'react-dom';
-import App from './Components/App';
 import './Components/App.css';
 import  state from './Redux/State'
+import {rerenderEntireTree} from './render';
 
 // let DialogItems = [
 //     {id: 1, name: 'Artem'},
@@ -29,4 +27,4 @@ import  state from './Redux/State'
 //     {id: 3, name: 'BWM', countLike: 22}
 // ]
 
-render(<App state={state}/>, document.getElementById('root'));
+rerenderEntireTree(state);

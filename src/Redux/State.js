@@ -1,3 +1,4 @@
+import {rerenderEntireTree} from '../render';
 let state = {
     Content: {
         PostsItems: [
@@ -42,6 +43,7 @@ export let addNewPost = (data) =>{
         id: 14, name: data, countLike: 1122
     }
     state.Content.PostsItems.push(newPost);
+    rerenderEntireTree(state)
 }
 
 export default state
