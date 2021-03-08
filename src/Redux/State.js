@@ -1,3 +1,4 @@
+import { render } from '@testing-library/react';
 import {rerenderEntireTree} from '../render';
 let state = {
     Content: {
@@ -10,7 +11,8 @@ let state = {
             {id: 2, name: 'p2sadasdadsWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW', countLike: 122222},
             {id: 3, name: 'BWMWWWWWWWWWWWWWWWWW', countLike: 22},
             {id: 3, name: 'Audi', countLike: 22}
-        ]
+        ],
+        newStateText: 'input...',
     },
     Messages: {
         MessageItems: [
@@ -38,11 +40,17 @@ let state = {
         ]
     }
 }
-export let addNewPost = (data) =>{
+export let addNewPost = () =>{
     let newPost = {
-        id: 14, name: data, countLike: 1122
+        id: 14, name: state.Content.newStateText, countLike: 1122
     }
-    state.Content.PostsItems.push(newPost);
+    state.Content.PostsItems.push(newPost)
+    state.Content.newStateText = ' '
+    rerenderEntireTree(state)
+}
+
+export let addNewText = (text) =>{
+    state.Content.newStateText = text
     rerenderEntireTree(state)
 }
 
