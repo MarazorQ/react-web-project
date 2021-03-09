@@ -1,5 +1,7 @@
-import { render } from '@testing-library/react';
-import {rerenderEntireTree} from '../render';
+let rerenderEntireTree = () =>{
+    console.log('fdefd')
+}
+
 let state = {
     Content: {
         PostsItems: [
@@ -52,6 +54,10 @@ export let addNewPost = () =>{
 export let addNewText = (text) =>{
     state.Content.newStateText = text
     rerenderEntireTree(state)
+}
+//pattern - observer(listner)
+export let subscriber = (observer) =>{
+    rerenderEntireTree = observer
 }
 
 export default state
